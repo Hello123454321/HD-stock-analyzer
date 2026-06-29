@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&P 500 Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📈 S&P 500 Investment Analyzer</h1>
+        <p>Data-backed insights to help you research smarter</p>
+    </header>
+
+    <main>
+        <!-- Search Section -->
+        <section class="search-section">
+            <h2>Analyze a Stock</h2>
+            <div class="search-bar">
+                <input type="text" id="symbolInput" placeholder="Enter ticker symbol (e.g. AAPL, MSFT)" />
+                <button onclick="analyzeStock()">Analyze</button>
+            </div>
+        </section>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Fetching data and generating analysis...</p>
+        </div>
+
+        <!-- Results Section -->
+        <section id="results" class="hidden">
+            <div class="metrics-grid" id="metricsGrid"></div>
+            <div class="analysis-box" id="analysisBox"></div>
+        </section>
+
+        <!-- Top Picks Section -->
+        <section class="top-picks">
+            <h2>🏆 Top Picks by Net Margin</h2>
+            <button onclick="loadTopPicks()">Load Top Picks</button>
+            <div id="topPicksList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>⚠️ This tool provides educational analysis only. Not financial advice. Always do your own research.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

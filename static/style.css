@@ -1,0 +1,93 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f1117;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #1a1f2e, #2d3561);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid #3d5af1;
+}
+
+header h1 { font-size: 2.2rem; color: #ffffff; }
+header p { color: #9aa0b4; margin-top: 8px; }
+
+main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+
+.search-section { margin-bottom: 40px; }
+.search-section h2 { margin-bottom: 16px; color: #c0c8ff; }
+
+.search-bar { display: flex; gap: 12px; }
+.search-bar input {
+    flex: 1; padding: 14px 18px;
+    background: #1e2235; border: 1px solid #3d5af1;
+    border-radius: 8px; color: white; font-size: 1rem;
+}
+.search-bar input:focus { outline: none; border-color: #6c8fff; }
+
+button {
+    padding: 14px 28px; background: #3d5af1;
+    color: white; border: none; border-radius: 8px;
+    cursor: pointer; font-size: 1rem; font-weight: 600;
+    transition: background 0.2s;
+}
+button:hover { background: #5570f5; }
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; margin-bottom: 24px;
+}
+
+.metric-card {
+    background: #1e2235; border: 1px solid #2d3561;
+    border-radius: 12px; padding: 20px; text-align: center;
+}
+.metric-card .label { font-size: 0.8rem; color: #9aa0b4; margin-bottom: 8px; }
+.metric-card .value { font-size: 1.5rem; font-weight: 700; color: #6c8fff; }
+
+.analysis-box {
+    background: #1e2235; border: 1px solid #3d5af1;
+    border-radius: 12px; padding: 28px;
+    line-height: 1.7; white-space: pre-wrap;
+}
+
+.top-picks { margin-top: 60px; }
+.top-picks h2 { margin-bottom: 16px; color: #c0c8ff; }
+.top-picks button { margin-bottom: 20px; }
+
+.pick-card {
+    background: #1e2235; border: 1px solid #2d3561;
+    border-radius: 10px; padding: 16px 20px;
+    margin-bottom: 10px; display: flex;
+    justify-content: space-between; align-items: center;
+    cursor: pointer; transition: border-color 0.2s;
+}
+.pick-card:hover { border-color: #3d5af1; }
+.pick-card .symbol { font-weight: 700; font-size: 1.1rem; color: #6c8fff; }
+.pick-card .margin { color: #4caf82; font-weight: 600; }
+
+.hidden { display: none; }
+
+.spinner {
+    width: 40px; height: 40px;
+    border: 4px solid #2d3561;
+    border-top-color: #3d5af1;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 20px auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+#loading { text-align: center; padding: 40px; }
+
+footer {
+    text-align: center; padding: 30px;
+    color: #555; font-size: 0.85rem;
+    border-top: 1px solid #1e2235; margin-top: 60px;
+}
